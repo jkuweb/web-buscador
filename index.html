@@ -90,7 +90,7 @@
 					</div>
 					<div class="form__input--four">
 						<label for="travellers">¿Para cuantas personas?</label>
-						<select id="travellers" name="travellers" class="form__input grid-item__five" placeholder="1 Adulto">
+						<select id="travellers" name="travellers" class="form__input grid-item__five custom-select">
 							<option> 1 </option>
 							<option> 3 </option>
 							<option> 4 </option>
@@ -171,7 +171,7 @@
 						</td>
 						<td data-label="Precio">481€</td>
 						<td>
-							<button class="table_btn">Reservar</button>
+							<button class="table__btn">Reservar</button>
 						</td>
 					</tr>
 					<tr>
@@ -206,7 +206,7 @@
 						</td>
 						<td data-label="Precio">197€</td>
 						<td>
-							<button class="table_btn">Reservar</button>
+							<button class="table__btn">Reservar</button>
 						</td>
 					</tr>
 					<tr>
@@ -241,7 +241,7 @@
 						</td>
 						<td data-label="Precio">367€</td>
 						<td>
-							<button>Reservar</button>
+							<button class="table__btn">Reservar</button>
 						</td>
 					</tr>
 					<tr>
@@ -276,7 +276,7 @@
 						</td>
 						<td data-label="Precio">587€</td>
 						<td>
-							<button class="table_btn">Reservar</button>
+							<button class="table__btn">Reservar</button>
 						</td>
 					</tr>
 					<tr>
@@ -309,7 +309,7 @@
 						</td>
 						<td data-label="Precio">467€</td>
 						<td>
-							<button class="table_btn">Reservar</button>
+							<button class="table__btn">Reservar</button>
 						</td>
 					</tr>
 					<tr>
@@ -342,7 +342,7 @@
 						</td>
 						<td data-label="Precio">367€</td>
 						<td>
-							<button class="table_btn">Reservar</button>
+							<button class="table__btn">Reservar</button>
 						</td>
 					</tr>
 				</table>
@@ -357,7 +357,7 @@
 						<div class="card__body">
 							<div class="card__details">
 								<p>WELKHOME</p>
-								<span class="card__sale card__sale--green">On Sale</span>
+								<span class="card__sale card__sale--green">Reservar</span>
 								<ul>
 									<li>Calle del Monte Esquinza, 15, 28010 Madrid</li>
 									<li>ES 258€</li>
@@ -375,7 +375,7 @@
 						<div class="card__body">
 							<div class="card__details">
 								<p>Diurno</p>
-								<span class="card__sale card__sale--green">On Sale</span>
+								<span class="card__sale card__sale--green">Reservar</span>
 								<ul>
 									<li>Calle de San Marcos, 37, 28004 Madrid</li>
 									<li>ES 541€</li>
@@ -393,7 +393,7 @@
 						<div class="card__body">
 							<div class="card__details">
 								<p>Shalakabula</p>
-								<span class="card__sale card__sale--red">Only 1 left</span>
+								<span class="card__sale card__sale--red">Solo queda 1</span>
 								<ul>
 									<li>Calle de Don Ramon de la Cruz, 72, 28007 Madrid</li>
 									<li>ES 321€</li>
@@ -411,7 +411,7 @@
 						<div class="card__body">
 							<div class="card__details">
 								<p>MACAO</p>
-								<span class="card__sale card__sale--green">On Sale</span>
+								<span class="card__sale card__sale--green">Reservar</span>
 								<ul>
 									<li>Calle del Príncipe, 16, 28001 Madrid</li>
 									<li>ES 580€</li>
@@ -429,7 +429,7 @@
 						<div class="card__body">
 							<div class="card__details">
 								<p>Picasso</p>
-								<span class="card__sale card__sale--red">Only 3 left</span>
+								<span class="card__sale card__sale--red">Solo quedan 3</span>
 								<ul>
 									<li>Carrer de Mallorca, 422, 08013 Barcelona</li>
 									<li>ES 145€</li>
@@ -447,7 +447,7 @@
 						<div class="card__body">
 							<div class="card__details">
 								<p>Don Curado Tasting</p>
-								<span class="card__sale card__sale--green">On Sale</span>
+								<span class="card__sale card__sale--green">Reservar</span>
 								<ul>
 									<li>Rambla del Poblenou, 125, 08018 Barcelona</li>
 									<li>ES 241€</li>
@@ -465,7 +465,7 @@
 						<div class="card__body">
 							<div class="card__details">
 								<p>Sumo</p>
-								<span class="card__sale card__sale--green">On Sale</span>
+								<span class="card__sale card__sale--green">Reservar</span>
 								<ul>
 									<li>Carrer de Carcaixent, 4, 46007 Valencia</li>
 									<li>ES 157€</li>
@@ -483,7 +483,7 @@
 						<div class="card__body">
 							<div class="card__details">
 								<p>Tobiko</p>
-								<span class="card__sale card__sale--red">Only 5 left</span>
+								<span class="card__sale card__sale--red">Solo quedan 5</span>
 								<ul>
 									<li>Carrer de Boix, 46003 Valencia</li>
 									<li>ES 278€</li>
@@ -501,8 +501,8 @@
 				<p class="email__text">Códigos promocionales y promociones privadas de hasta 35% de descuento. Simplemente agregue su correo electrónico. Es así de simple.</p>
 				<form action="#">
 					<div class="email__input-wrapper">
-						<input type="text" class="email__input" placeholder="email@ejemplo.com">
-						<button type="submit" class="email__btn">Suscribirme</button>
+						<input type="text" class="email__input" placeholder="tu-email@ejemplo.com">
+						<button type="submit" class="email__btn">¡Quiero suscribirme!</button>
 					</div>
 				</form>
 			</section>
@@ -564,7 +564,7 @@
 					</div>
 				</div>
 				<div class="footer__copyright">
-					<p>2020 Restaurant, Inc.</p>
+					<p>@2020 Restaurant, Inc.</p>
 				</div>
 					<p class="footer__info">Web desarrollada por <a href="https://josebaquerejeta.com">Joseba Querejeta</a>
 			</footer>

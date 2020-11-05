@@ -488,7 +488,8 @@ span.fade {
   margin: 3rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  grid-gap: 1rem; }
+  grid-column-gap: 2em;
+  grid-row-gap: 4rem; }
   @media only screen and (max-width: 37.5em) {
     .cards {
       margin: 0 auto;
@@ -503,6 +504,9 @@ span.fade {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   background-color: #fff; }
+  @media only screen and (max-width: 37.5em) {
+    .card {
+      margin-top: 3rem; } }
   .card__header {
     width: 100%;
     position: relative; }
@@ -563,11 +567,17 @@ span.fade {
       background-color: #c6f6d5;
       color: #2b4c35; }
 
+@media only screen and (max-width: 37.5em) {
+  .card__sale {
+    font-size: 0.8em; }
+  .card__body p {
+    padding-right: 8rem; } }
+
 .form {
   position: relative;
   background-color: #fff;
   padding: 2em 2.5em 1em 2.5em;
-  box-shadow: 10px 10px 46px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   display: grid;
   grid-column-gap: 1rem;
@@ -575,21 +585,6 @@ span.fade {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, minmax(3rem, auto));
   grid-template-areas: "radio     radio   radio   radio" "inputA    inputB  inputC  inputD" "checkbox  checkbox  checkbox  button"; }
-  @media only screen and (max-width: 75em) {
-    .form {
-      grid-template-columns: repeat(4, minmax(8rem, 1fr));
-      grid-template-areas: "radio     radio   radio   radio" "inputA    inputB  inputC  inputD" "checkbox  checkbox  button  button";
-      justify-content: center; } }
-  @media only screen and (max-width: 56.25em) {
-    .form {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: "radio     radio" "inputA    inputA" "inputB    inputB" "inputC    inputC" "inputD    inputD" "checkbox  button"; } }
-  @media only screen and (max-width: 37.5em) {
-    .form {
-      padding: 1em;
-      grid-template-columns: 1fr;
-      grid-template-rows: 6rem repeat(4, 1fr) 3rem 1fr;
-      grid-template-areas: "radio" "inputA" "inputB" "inputC" "inputD" "checkbox" "button"; } }
   .form__radio {
     grid-area: radio; }
   .form__radio-input, .form__checkbox-input {
@@ -602,15 +597,6 @@ span.fade {
     position: relative;
     padding-left: 2.7rem;
     padding-right: 1.7rem; }
-    @media only screen and (max-width: 75em) {
-      .form__radio-label, .form__checkbox-label {
-        padding-left: 1.7rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .form__radio-label, .form__checkbox-label {
-        font-size: .9em; }
-        .form__radio-label p, .form__checkbox-label p {
-          position: relative;
-          top: -1px; } }
   .form__radio-button {
     height: 1.7rem;
     width: 1.7rem;
@@ -621,11 +607,6 @@ span.fade {
     position: absolute;
     left: 0;
     top: -0.4rem; }
-    @media only screen and (max-width: 75em) {
-      .form__radio-button {
-        height: 1.3rem;
-        width: 1.3rem;
-        top: -0.2rem; } }
     .form__radio-button::after {
       content: "";
       display: block;
@@ -638,10 +619,6 @@ span.fade {
       transform: translate(-50%, -50%);
       background-color: #fff;
       opacity: 0; }
-      @media only screen and (max-width: 75em) {
-        .form__radio-button::after {
-          height: 0.5rem;
-          width: 0.5rem; } }
   .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
     opacity: 1; }
   .form__radio-input:checked ~ .form__radio-label .form__radio-button {
@@ -657,11 +634,6 @@ span.fade {
     position: absolute;
     left: 0;
     top: -0.3rem; }
-    @media only screen and (max-width: 75em) {
-      .form__checkbox-button {
-        height: 1.3rem;
-        width: 1.3rem;
-        top: -0.3rem; } }
   .form__checkbox-icon {
     opacity: 0;
     color: #2B5083;
@@ -682,21 +654,12 @@ span.fade {
     position: relative; }
     .form__input--one {
       grid-area: inputA; }
-      @media only screen and (max-width: 75em) {
-        .form__input--one {
-          align-self: end; } }
     .form__input--two {
       grid-area: inputB; }
     .form__input--tree {
       grid-area: inputC; }
-      @media only screen and (max-width: 75em) {
-        .form__input--tree {
-          align-self: end; } }
     .form__input--four {
       grid-area: inputD; }
-      @media only screen and (max-width: 75em) {
-        .form__input--four {
-          align-self: end; } }
     .form__input--one, .form__input--two, .form__input--tree, .form__input--four {
       display: flex;
       flex-direction: column; }
@@ -714,25 +677,10 @@ span.fade {
     grid-area: checkbox;
     align-self: center; }
   .form__button {
-    grid-area: button;
-    justify-self: end;
-    align-self: center;
-    position: relative;
-    display: flex;
-    padding-top: 0.7em;
-    padding-bottom: 0.7em;
-    cursor: pointer; }
-    @media only screen and (max-width: 37.5em) {
-      .form__button {
-        justify-self: center; } }
+    justify-self: end; }
   .form__button-icon {
     align-self: center;
     margin-right: 0.5em; }
-  @media only screen and (max-width: 37.5em) {
-    .form__radio {
-      height: 100%;
-      flex-direction: column;
-      justify-content: space-around; } }
   .form__radio, .form__checkbox {
     display: flex;
     align-self: center; }
@@ -760,28 +708,73 @@ span.fade {
     color: #744210;
     font-weight: 900; }
 
+@media only screen and (max-width: 76em) {
+  .form {
+    grid-template-columns: repeat(4, minmax(8rem, 1fr));
+    grid-template-areas: "radio     radio   radio   radio" "inputA    inputB  inputC  inputD" "checkbox  checkbox  button  button";
+    justify-content: center; }
+    .form__radio-label, .form__checkbox-label {
+      padding-left: 1.7rem; }
+    .form__radio-button {
+      height: 1.3rem;
+      width: 1.3rem;
+      top: -0.2rem; }
+      .form__radio-button::after {
+        height: 0.5rem;
+        width: 0.5rem; }
+    .form__checkbox-button {
+      height: 1.3rem;
+      width: 1.3rem;
+      top: -0.3rem; }
+    .form__input--one {
+      align-self: end; }
+    .form__input--tree {
+      align-self: end; }
+    .form__input--four {
+      align-self: end; }
+    .form__button {
+      grid-column: span 2;
+      justify-self: end; } }
+
+@media only screen and (max-width: 56.25em) {
+  .form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "radio     radio" "inputA    inputA" "inputB    inputB" "inputC    inputC" "inputD    inputD" "checkbox  button"; } }
+
+@media only screen and (max-width: 37.5em) {
+  .form {
+    padding: 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6rem repeat(4, 1fr) 3rem 1fr;
+    grid-template-areas: "radio" "inputA" "inputB" "inputC" "inputD" "checkbox" "button"; }
+    .form__radio-label, .form__checkbox-label {
+      font-size: .9em; }
+      .form__radio-label p, .form__checkbox-label p {
+        position: relative;
+        top: -1px; }
+    .form__button {
+      justify-self: center; }
+    .form__radio {
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-around; } }
+
 .table {
   width: 90%;
   margin: 3rem auto 0;
   border-radius: 5px;
-  box-shadow: 0px 7px 17px -2px rgba(0, 0, 0, 0.83); }
+  box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.2); }
   .table__btn {
     padding: 1em 2em;
     background-color: #718096;
     border-radius: 4px;
     color: #060606;
     font-weight: 700; }
-  @media only screen and (max-width: 50em) {
-    .table {
-      box-shadow: none; } }
   .table__header {
     text-transform: uppercase;
     font-size: .8em;
     color: #718096;
     letter-spacing: .06em; }
-    @media only screen and (max-width: 50em) {
-      .table__header {
-        display: none; } }
 
 th {
   text-align: left;
@@ -795,36 +788,10 @@ tr {
   grid-template-columns: 4rem repeat(4, 1fr) repeat(2, 9rem);
   grid-template-rows: 5rem;
   align-items: center; }
-  @media only screen and (max-width: 81.25em) {
-    tr {
-      grid-template-columns: 4rem minmax(118px, 1fr) repeat(3, minmax(160px, 1fr)) repeat(2, 1fr); } }
-  @media only screen and (max-width: 50em) {
-    tr {
-      margin-bottom: 5rem;
-      display: block;
-      box-shadow: 0px 7px 17px -2px rgba(0, 0, 0, 0.83); } }
 
 td {
   position: relative;
   font-size: .9em; }
-  @media only screen and (max-width: 50em) {
-    td {
-      display: block;
-      text-align: right;
-      padding: 1em; }
-      td:nth-child(even) {
-        background-color: #edf2f7; }
-      td:nth-child(odd) {
-        background-color: #fff; }
-      td:last-child {
-        border-bottom: 0;
-        text-align: center; }
-      td:before {
-        content: attr(data-label);
-        float: left;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: #718096; } }
 
 tr:nth-child(odd) {
   background-color: #EDF2F7; }
@@ -848,9 +815,40 @@ td span:last-child {
   left: 50%;
   transform: translate(-50%, -50%); }
 
+@media only screen and (max-width: 50em) {
+  .table {
+    box-shadow: none; }
+    .table__header {
+      display: none; }
+  tr {
+    margin-bottom: 5rem;
+    display: block;
+    box-shadow: 0px 7px 17px -2px rgba(0, 0, 0, 0.83); }
+  td {
+    display: block;
+    text-align: right;
+    padding: 1em; }
+    td:nth-child(even) {
+      background-color: #edf2f7; }
+    td:nth-child(odd) {
+      background-color: #fff; }
+    td:last-child {
+      border-bottom: 0;
+      text-align: center; }
+    td:before {
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #718096; } }
+
+@media only screen and (max-width: 81.25em) {
+  tr {
+    grid-template-columns: 4rem minmax(118px, 1fr) repeat(3, minmax(160px, 1fr)) repeat(2, 1fr); } }
+
 .header {
   height: 30rem; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 76em) {
     .header {
       height: 35rem; } }
   @media only screen and (max-width: 56.25em) {
@@ -910,7 +908,7 @@ td span:last-child {
       left: 0;
       z-index: 1;
       background-color: #2B5083;
-      clip-path: circle(28px at 100% -5%);
+      clip-path: circle(28px at 100% -15%);
       flex-direction: column;
       justify-content: space-evenly;
       transition: all 0.4s ease-out; } }
@@ -1010,7 +1008,12 @@ td span:last-child {
   .email__input {
     border: none;
     flex-grow: 1;
+    padding-left: 1em;
     max-width: 30rem; }
+    @media only screen and (max-width: 37.5em) {
+      .email__input {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px; } }
   .email__btn {
     background-color: #ecc94b;
     padding: 0 1rem 0;
@@ -1019,7 +1022,10 @@ td span:last-child {
     cursor: pointer; }
     @media only screen and (max-width: 37.5em) {
       .email__btn {
-        padding: .5rem; } }
+        max-width: 30rem;
+        padding: .5rem;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px; } }
 
 .footer {
   width: 100%;
@@ -1076,7 +1082,8 @@ td span:last-child {
     border-top: 1px solid #fff; }
   .footer__info {
     text-align: center;
-    margin-left: -1em; }
+    margin-left: -1em;
+    font-size: .9em; }
     .footer__info a {
       color: #ecc94b;
       display: inline-block;
@@ -1084,6 +1091,28 @@ td span:last-child {
       margin-left: -1em; }
       .footer__info a:hover {
         color: #74421b; }
+
+@media only screen and (max-width: 37.5em) {
+  .footer__copyright, .footer__social-media, .footer__currency {
+    padding: 1rem; }
+  .footer__copyright {
+    text-align: center; }
+  .footer__info {
+    margin-left: 0; }
+    .footer__info a {
+      margin: 0;
+      padding: 0; } }
+
+@media only screen and (max-width: 56.25em) {
+  .footer {
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: none; }
+    .footer__social-media {
+      grid-column: 3; }
+    .footer__info {
+      justify-self: end;
+      grid-column: span 2; } }
 
 .section-table {
   margin-top: 18rem; }
