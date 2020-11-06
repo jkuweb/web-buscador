@@ -445,12 +445,12 @@ body {
 
 .wrapper {
   margin: 0 6rem; }
-  @media only screen and (max-width: 37.5em) {
-    .wrapper {
-      margin: 0 .5em; } }
   @media only screen and (max-width: 57.25em) {
     .wrapper {
       margin: 0 2em; } }
+  @media only screen and (max-width: 37.5em) {
+    .wrapper {
+      margin: 0 .5em; } }
 
 .text-animation {
   opacity: 0;
@@ -916,6 +916,8 @@ td span:last-child {
 
 @media only screen and (max-width: 50em) {
   .nav {
+    display: grid;
+    grid-template-columns: 1fr;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -929,25 +931,24 @@ td span:last-child {
     justify-content: space-evenly;
     transition: all 0.1s ease-out; }
     .nav__item-list {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
       width: 100%;
+      flex-direction: column;
       text-align: center;
       text-transform: uppercase; }
-    .nav__item:first-child {
-      margin-top: 4rem; }
-    .nav__item:not(:last-child) {
-      margin-right: 0; }
+    .nav__item {
+      height: 6rem; }
+      .nav__item:first-child {
+        margin-top: 2rem; }
+      .nav__item:not(:last-child) {
+        margin-right: 0; }
     .nav__link {
       display: inline-block;
       width: 100%;
       padding: 3em 0; }
   .bottons {
     width: 100%;
-    text-align: center;
     border-top: 1px solid #fff;
+    text-align: center;
     padding-top: 1em; }
   #menuToggle {
     position: absolute;
