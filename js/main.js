@@ -1,9 +1,10 @@
-const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('#menuToggle');
 const navLinks = document.querySelector('.nav');
+const close = document.querySelector('.hamburger .line');
 const links = document.querySelectorAll('.nav li');
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
-})
+});
 // video
 const video = document.getElementById("bg-video");
 video.playbackRate = .5;
