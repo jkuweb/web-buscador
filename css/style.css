@@ -565,7 +565,7 @@ span.fade {
     right: 2rem; }
     .card__sale--red {
       background-color: #fed7d7;
-      color: #9a3333; }
+      color: #6c2020; }
     .card__sale--green {
       background-color: #c6f6d5;
       color: #2b4c35; }
@@ -854,9 +854,12 @@ td span:last-child {
   @media only screen and (max-width: 76em) {
     .header {
       height: 35rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      height: 36rem; } }
   @media only screen and (max-width: 57.25em) {
     .header {
-      height: 100%; } }
+      height: 36rem; } }
   .header__top {
     border-bottom: 1px solid #edf2f72b;
     padding-top: 1em;
@@ -936,7 +939,7 @@ td span:last-child {
       text-align: center;
       text-transform: uppercase; }
     .nav__item {
-      height: 6rem; }
+      height: 5rem; }
       .nav__item:first-child {
         margin-top: 2rem; }
       .nav__item:not(:last-child) {
